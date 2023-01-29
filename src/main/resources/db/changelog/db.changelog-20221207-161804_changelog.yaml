@@ -1,0 +1,14 @@
+databaseChangeLog:
+- changeSet:
+    id: 1670429891208-1
+    author: winri (generated)
+    changes:
+    - addColumn:
+        columns:
+        - column:
+            constraints:
+              nullable: true
+            name: is_aisle
+            type: boolean
+        tableName: seat_type
+

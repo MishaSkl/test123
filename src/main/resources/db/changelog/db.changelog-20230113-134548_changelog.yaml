@@ -1,0 +1,12 @@
+# В прошлом Changelog была ошибка varchar(2), вместо varchar(3)
+# liquibase:diff отказывался вносить это изменение, сделал сам по документации
+# https://docs.liquibase.com/change-types/modify-data-type.html
+databaseChangeLog:
+  - changeSet:
+      id: 1673358359185-2
+      author: Kosarev
+      changes:
+        - modifyDataType:
+            tableName: aircraft_type
+            columnName: iata_code
+            newDataType: varchar(3)

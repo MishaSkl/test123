@@ -1,0 +1,11 @@
+databaseChangeLog:
+- changeSet:
+    id: 1671995063407-1
+    author: avsuva (generated)
+    changes:
+    - addNotNullConstraint:
+        columnDataType: boolean
+        columnName: is_aisle
+        tableName: seat_type
+        validate: true
+

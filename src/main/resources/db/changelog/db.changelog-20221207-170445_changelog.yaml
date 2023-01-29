@@ -1,0 +1,21 @@
+databaseChangeLog:
+- changeSet:
+    id: 1670432691842-1
+    author: winri (generated)
+    changes:
+    - addColumn:
+        columns:
+        - column:
+            constraints:
+              nullable: false
+            name: is_default
+            type: boolean
+        tableName: documents
+- changeSet:
+    id: 1670432691842-2
+    author: winri (generated)
+    changes:
+    - dropColumn:
+        columnName: version
+        tableName: documents
+

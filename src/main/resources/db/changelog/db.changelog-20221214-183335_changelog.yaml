@@ -1,0 +1,121 @@
+databaseChangeLog:
+- changeSet:
+    id: 1671042819601-1
+    author: Евгений (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: destinationPK
+            name: id
+            type: BIGINT
+        - column:
+            name: airport_code
+            type: VARCHAR(255)
+        - column:
+            name: airport_name
+            type: VARCHAR(255)
+        - column:
+            name: city
+            type: VARCHAR(255)
+        - column:
+            name: country_code
+            type: VARCHAR(255)
+        - column:
+            name: country_name
+            type: VARCHAR(255)
+        - column:
+            name: timezone
+            type: INTEGER
+        tableName: destination
+- changeSet:
+    id: 1671042819601-2
+    author: Евгений (generated)
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: destination_from
+        baseTableName: flight
+        constraintName: FK6ovnut086e7ryg2m0x6e8i2eh
+        deferrable: false
+        initiallyDeferred: false
+        referencedColumnNames: id
+        referencedTableName: destination
+        validate: true
+- changeSet:
+    id: 1671042819601-3
+    author: Евгений (generated)
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: destination_to
+        baseTableName: flight
+        constraintName: FKlbm2yrcbbsymv92itgfwpsdn5
+        deferrable: false
+        initiallyDeferred: false
+        referencedColumnNames: id
+        referencedTableName: destination
+        validate: true
+- changeSet:
+    id: 1671042819601-4
+    author: Евгений (generated)
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: destination_to
+        baseTableName: route
+        constraintName: FKnqx835ul3g8h7gxw8gl8wrqre
+        deferrable: false
+        initiallyDeferred: false
+        referencedColumnNames: id
+        referencedTableName: destination
+        validate: true
+- changeSet:
+    id: 1671042819601-5
+    author: Евгений (generated)
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: destination_from
+        baseTableName: route
+        constraintName: FKoe67uxtkpfr7way5f7aqyy27p
+        deferrable: false
+        initiallyDeferred: false
+        referencedColumnNames: id
+        referencedTableName: destination
+        validate: true
+- changeSet:
+    id: 1671042819601-6
+    author: Евгений (generated)
+    changes:
+    - dropForeignKeyConstraint:
+        baseTableName: flight
+        constraintName: FKi5jk3pt560u6lmhiparw4wp36
+- changeSet:
+    id: 1671042819601-7
+    author: Евгений (generated)
+    changes:
+    - dropForeignKeyConstraint:
+        baseTableName: route
+        constraintName: FKkm2cjxwplkpv233su1aphpik9
+- changeSet:
+    id: 1671042819601-8
+    author: Евгений (generated)
+    changes:
+    - dropForeignKeyConstraint:
+        baseTableName: flight
+        constraintName: FKn4jqxwea5fam8fdtx4bmek97v
+- changeSet:
+    id: 1671042819601-9
+    author: Евгений (generated)
+    changes:
+    - dropForeignKeyConstraint:
+        baseTableName: route
+        constraintName: FKq1t7j6pfc28xiohiicgra7209
+- changeSet:
+    id: 1671042819601-10
+    author: Евгений (generated)
+    changes:
+    - dropTable:
+        tableName: destinations
+

@@ -1,0 +1,30 @@
+databaseChangeLog:
+- changeSet:
+    id: 1673358359185-1
+    author: Lomaev (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: aircraft_typePK
+            name: id
+            type: BIGINT
+        - column:
+            constraints:
+              nullable: false
+            name: iata_code
+            type: VARCHAR(2)
+        - column:
+            constraints:
+              nullable: false
+            name: model
+            type: VARCHAR(255)
+        - column:
+            name: range
+            type: INTEGER
+        tableName: aircraft_type
+

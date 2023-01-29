@@ -1,0 +1,71 @@
+databaseChangeLog:
+- changeSet:
+    id: 1672242513619-1
+    author: avsuva (generated)
+    changes:
+    - createTable:
+        columns:
+        - column:
+            autoIncrement: true
+            constraints:
+              nullable: false
+              primaryKey: true
+              primaryKeyName: ticketPK
+            name: id
+            type: BIGINT
+        - column:
+            name: booking_number
+            type: VARCHAR(255)
+        - column:
+            name: seat_category
+            type: VARCHAR(255)
+        - column:
+            name: flight_id
+            type: BIGINT
+        - column:
+            name: passenger_id
+            type: BIGINT
+        - column:
+            name: seat_id
+            type: BIGINT
+        tableName: ticket
+- changeSet:
+    id: 1672242513619-2
+    author: avsuva (generated)
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: passenger_id
+        baseTableName: ticket
+        constraintName: FKcomb82a6tyqhr7fbmict4vq2i
+        deferrable: false
+        initiallyDeferred: false
+        referencedColumnNames: id
+        referencedTableName: passengers
+        validate: true
+- changeSet:
+    id: 1672242513619-3
+    author: avsuva (generated)
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: flight_id
+        baseTableName: ticket
+        constraintName: FKfju27cbcbl1w16qeora1r636q
+        deferrable: false
+        initiallyDeferred: false
+        referencedColumnNames: id
+        referencedTableName: flight
+        validate: true
+- changeSet:
+    id: 1672242513619-4
+    author: avsuva (generated)
+    changes:
+    - addForeignKeyConstraint:
+        baseColumnNames: seat_id
+        baseTableName: ticket
+        constraintName: FKqahao9a85drt47ikjp0b8syvh
+        deferrable: false
+        initiallyDeferred: false
+        referencedColumnNames: id
+        referencedTableName: seat
+        validate: true
+

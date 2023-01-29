@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/db.changelog-20221130-113444_changelog.yaml
+  - include:
+      file: db/changelog/db.changelog-20221202-060239_changelog.yaml
+  - include:
+      file: db/changelog/db.changelog-20221201-061106_changelog.yaml
+  - include:
+      file: db/changelog/db.changelog-20221207-161804_changelog.yaml
+  - include:
+      file: db/changelog/db.changelog-20221207-170445_changelog.yaml
+  - include:
+      file: db/changelog/db.changelog-20221210-192011_changelog.yaml
+  - include:
+      file: db/changelog/db.changelog-20221210-193757_changelog.yaml
+  - include:
+      file: db/changelog/db.changelog-20221214-183335_changelog.yaml
+  - include:
+      file: db/changelog/db.changelog-20221225-232721_changelog.yaml
+  - include:
+      file: db/changelog/db.changelog-20230110-134547_changelog.yaml
+  - include:
+      #file: db/changelog/db.changelog-20221226-192202_changelog.yaml #file does not exist?
+      file: db/changelog/db.changelog-20221225-190415_changelog.yaml
+  - include:
+      file: db/changelog/db.changelog-20221228-154828_changelog.yaml
+  - include:
+      file: db/changelog/db.changelog-20221225-190415_changelog.yaml
+  - include:
+      file: db/changelog/db.changelog-20221228-154828_changelog.yaml
+  - include:
+      file: db/changelog/db.changelog-20230113-134548_changelog.yaml
